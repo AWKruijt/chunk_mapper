@@ -1,5 +1,13 @@
 chunkmap <- function(){
   
+  require(data.table)
+  
+  tryCatch({
+   readLines(rstudioapi::getActiveDocumentContext()$path)[1]  
+  }, warning = function(w, e) {
+    warning("chunkmap uses the saved version of your markdown file - did you save it yet?\n\n") 
+  })
+  
   lines <- readLines(rstudioapi::getActiveDocumentContext()$path)  # here I change a bit - it now reads the current active document
   
   # find which lines are chunk starts
