@@ -1,0 +1,14 @@
+Package: chunk_mapper
+Title: chunk_mapper
+Version: 0
+Authors@R: person("Anne-Wil", "Kruijt", email = "mail@awkruijt.nl", role = c("aut", "cre"))
+Maintainer: Anne-Wil Kruijt <mail@awkruijt.nl>
+Description: Return a datable with an overview of chunks (names and startlines) - to be used at the top of a multi chunk rmd file.
+Depends: R (>= 3.3.2)
+License: none
+Encoding: UTF-8
+LazyData: true
+Imports:
+    data.table
+URL: http://awkruijt/chunk_mapper/
+BugReports: https://github.com/awkruijt/chunk_mapper/issues
