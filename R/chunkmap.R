@@ -19,7 +19,7 @@ chunkmap <- function(){
   }
   
   # fill a datatable with chunk number, identifying info in between "{r" and either "," or "}", and the linenumber of chunk header
-chunkMap <- data.table(
+chunkMap <- data.table::data.table(
   'chunk #' = seq(1:length(chunk_header_indices)), 
   name =   sub('(.*\\{r )(.*?)([\\}|,].*)', "\\2", lines[chunk_header_indices]),
   startline = chunk_header_indices)
